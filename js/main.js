@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.getElementById('back-to-top');
-    const viewCommentsButton = document.getElementById('view-comments');
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const body = document.body;
 
-    backToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    themeSwitcher.addEventListener('click', function() {
+        if (body.classList.contains('light-mode')) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+        }
     });
 
-    viewCommentsButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Implement the logic to view comments
-    });
+    // Initialize with dark mode
+    body.classList.add('dark-mode');
 });
