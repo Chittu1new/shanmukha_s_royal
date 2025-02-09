@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.NoOne's Blog</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -23,8 +23,13 @@
                 <a href="#posts">Posts</a>
                 <a href="#categories">Categories</a>
                 <a href="#about">About Me</a>
-                <input type="text" placeholder="Search..." id="search">
-                <button id="theme-switcher">Switch Theme</button>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." id="search">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button id="theme-switcher" title="Switch Theme">
+                    <i class="fas fa-adjust"></i>
+                </button>
             </nav>
         </div>
     </header>
