@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* New appealing color */
     color: #fff;
     padding: 10px 0;
     position: sticky;
@@ -108,7 +108,7 @@ body.light-mode {
 }
 
 body.light-mode header {
-    background: linear-gradient(90deg, #2196f3, #21cbf3);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
 }
 
 body.light-mode .header-right a {
@@ -120,11 +120,11 @@ body.light-mode .header-right a:hover {
 }
 
 body.light-mode #theme-switcher {
-    background: #2196f3;
+    background: #0072ff;
 }
 
 body.light-mode footer {
-    background: #2196f3;
+    background: #0072ff;
 }
 
 body.dark-mode {
@@ -133,7 +133,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: linear-gradient(90deg, #673ab7, #512da8);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
 }
 
 body.dark-mode .header-right a {
@@ -145,9 +145,9 @@ body.dark-mode .header-right a:hover {
 }
 
 body.dark-mode #theme-switcher {
-    background: #673ab7;
+    background: #00c6ff;
 }
 
 body.dark-mode footer {
-    background: #673ab7;
+    background: #00c6ff;
 }
