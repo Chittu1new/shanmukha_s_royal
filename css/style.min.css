@@ -165,3 +165,48 @@ body.dark-mode #theme-switcher {
 body.dark-mode footer {
     background: #ff7e5f;
 }
+
+/* Categories Page */
+.categories-page {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffeb3b;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+}
+
+.category-content {
+    display: none;
+}
