@@ -88,6 +88,18 @@ main {
     text-align: center;
 }
 
+.avatar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
 footer {
     background: #333;
     color: #fff;
