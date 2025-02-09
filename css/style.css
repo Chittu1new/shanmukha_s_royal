@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    float: left;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 2s steps(10, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: #ffeb3b;
+}
+
+#search {
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+#theme-switcher {
+    background: #ffeb3b;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+#theme-switcher:hover {
+    background: #ffc107;
+}
+
+main {
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode header {
+    background: linear-gradient(90deg, #2196f3, #21cbf3);
+}
+
+body.light-mode .header-right a {
+    color: #000;
+}
+
+body.light-mode .header-right a:hover {
+    color: #ff5722;
+}
+
+body.light-mode #theme-switcher {
+    background: #2196f3;
+}
+
+body.light-mode footer {
+    background: #2196f3;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #673ab7, #512da8);
+}
+
+body.dark-mode .header-right a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-right a:hover {
+    color: #ffeb3b;
+}
+
+body.dark-mode #theme-switcher {
+    background: #673ab7;
+}
+
+body.dark-mode footer {
+    background: #673ab7;
+}
