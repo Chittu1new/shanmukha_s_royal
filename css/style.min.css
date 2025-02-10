@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'VT323', monospace;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
@@ -12,7 +14,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* New appealing color */
+    background: linear-gradient(90deg, #000000, #00ff7f); /* Dark gradient */
     color: #fff;
     padding: 10px 0;
     position: sticky;
@@ -51,7 +53,7 @@ header {
 }
 
 .header-right a:hover {
-    color: #ffeb3b;
+    color: #FF0000;
 }
 
 .search-container {
@@ -83,7 +85,7 @@ header {
 }
 
 #theme-switcher:hover {
-    color: #ffeb3b;
+    color: #FF0000;
 }
 
 main {
@@ -109,7 +111,7 @@ main {
 }
 
 footer {
-    background: #333;
+    background: #000000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -117,12 +119,12 @@ footer {
 }
 
 body.light-mode {
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
     color: #333;
 }
 
 body.light-mode header {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg, #950101, #FF0000);
 }
 
 body.light-mode .header-right a {
@@ -130,7 +132,7 @@ body.light-mode .header-right a {
 }
 
 body.light-mode .header-right a:hover {
-    color: #ff5722;
+    color: #00ff7f;
 }
 
 body.light-mode #theme-switcher {
@@ -138,7 +140,7 @@ body.light-mode #theme-switcher {
 }
 
 body.light-mode footer {
-    background: #feb47b;
+    background: #950101;
 }
 
 body.dark-mode {
@@ -147,7 +149,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg, #000000, #00ff7f);
 }
 
 body.dark-mode .header-right a {
@@ -155,7 +157,7 @@ body.dark-mode .header-right a {
 }
 
 body.dark-mode .header-right a:hover {
-    color: #ffeb3b;
+    color: #FF0000;
 }
 
 body.dark-mode #theme-switcher {
@@ -163,23 +165,47 @@ body.dark-mode #theme-switcher {
 }
 
 body.dark-mode footer {
-    background: #ff7e5f;
+    background: #000000;
 }
 
 /* Categories Page */
 .categories-page {
     display: flex;
+    padding-top: 70px; /* Ensure content doesn't overlap with the header */
 }
 
 .sidebar {
-    width: 200px;
-    background-color: #333;
+    width: 150px; /* Reduced width for the sidebar */
+    background-color: #1a1a1a; /* Light black for sidebar */
     color: #fff;
     padding: 20px;
-    height: 100vh;
+    height: calc(100vh - 70px); /* Adjust for the header height */
     position: fixed;
     overflow-y: auto;
-    top: 0;
+    top: 70px; /* Ensure sidebar starts below the header */
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 50px; /* Reduced width for collapsed sidebar */
+}
+
+.sidebar.collapsed ul {
+    display: none;
+}
+
+.sidebar.collapsed #sidebar-toggle {
+    width: 100%;
+    text-align: center;
+}
+
+#sidebar-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .sidebar ul {
@@ -198,13 +224,17 @@ body.dark-mode footer {
 }
 
 .sidebar ul li a:hover {
-    color: #ffeb3b;
+    color: #FF0000;
 }
 
 .main-content {
-    margin-left: 220px;
+    margin-left: 170px; /* Adjusted to match the reduced sidebar width */
     padding: 20px;
     flex: 1;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 70px; /* Adjusted to match the reduced collapsed sidebar width */
 }
 
 .category-content {
