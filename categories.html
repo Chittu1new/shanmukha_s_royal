@@ -9,7 +9,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/js/all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/categories.js" defer></script>
 </head>
 <body class="dark-mode">
     <header>
@@ -35,11 +37,13 @@
     </header>
     <main class="categories-page">
         <div class="sidebar">
+            <button id="sidebar-toggle" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
             <ul>
                 <li><a href="#" data-category="xss">XSS</a></li>
                 <li><a href="#" data-category="mysql">MySQL Injection</a></li>
                 <li><a href="#" data-category="reverse-shell">Reverse Shell</a></li>
                 <li><a href="#" data-category="csrf">CSRF</a></li>
+                <li><a href="#" data-category="Linux">Linux</a></li>
                 <li><a href="#" data-category="ssrf">SSRF</a></li>
                 <!-- Add more categories as needed -->
             </ul>
@@ -61,6 +65,10 @@
                 <h2>CSRF (Cross-Site Request Forgery)</h2>
                 <p>Notes on CSRF...</p>
             </div>
+			<div id="Linux" class="category-content">
+                <h2>Linux (Linux commads)</h2>
+                <p>Notes on linux...</p>
+            </div>
             <div id="ssrf" class="category-content">
                 <h2>SSRF (Server-Side Request Forgery)</h2>
                 <p>Notes on SSRF...</p>
@@ -73,35 +81,5 @@
             <p>&copy; 2025 Mr.NoOne. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.sidebar a');
-            const contents = document.querySelectorAll('.category-content');
-
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const category = this.getAttribute('data-category');
-
-                    contents.forEach(content => {
-                        if (content.id === category) {
-                            content.style.display = 'block';
-                        } else {
-                            content.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Initialize by displaying the first category content
-            contents.forEach((content, index) => {
-                if (index === 0) {
-                    content.style.display = 'block';
-                } else {
-                    content.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
