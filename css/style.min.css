@@ -186,19 +186,6 @@ body.dark-mode footer {
     transition: width 0.3s;
 }
 
-.sidebar.collapsed {
-    width: 50px; /* Reduced width for collapsed sidebar */
-}
-
-.sidebar.collapsed ul {
-    display: none;
-}
-
-.sidebar.collapsed #sidebar-toggle {
-    width: 100%;
-    text-align: center;
-}
-
 #sidebar-toggle {
     background: none;
     border: none;
@@ -215,26 +202,30 @@ body.dark-mode footer {
 
 .sidebar ul li {
     margin: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
+    margin-left: 10px;
 }
 
 .sidebar ul li a:hover {
     color: #FF0000;
 }
 
-.main-content {
-    margin-left: 170px; /* Adjusted to match the reduced sidebar width */
-    padding: 20px;
-    flex: 1;
+.sidebar ul li .linux-icon {
+    font-size: 24px;
 }
 
-.sidebar.collapsed + .main-content {
-    margin-left: 70px; /* Adjusted to match the reduced collapsed sidebar width */
+.main-content {
+    margin-left: 150px; /* Adjusted to match the reduced sidebar width */
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s;
 }
 
 .category-content {
