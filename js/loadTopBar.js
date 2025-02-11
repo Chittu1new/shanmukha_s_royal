@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.getElementById("topbar").innerHTML = data;
+            // Initialize TypeIt after the top bar is loaded
             new TypeIt("#name", {
                 strings: "Mr.NoOne",
                 speed: 100,
