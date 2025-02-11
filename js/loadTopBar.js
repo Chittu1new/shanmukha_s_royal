@@ -1,15 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("topbar.html")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.text();
-        })
+document.addEventListener('DOMContentLoaded', function() {
+    // Load the topbar
+    fetch('topbar.html')
+        .then(response => response.text())
         .then(data => {
-            document.getElementById("topbar").innerHTML = data;
+            document.body.insertAdjacentHTML('afterbegin', data);
+            initNameTyping();
         })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
+        .catch(error => console.error('Error loading the topbar:', error));
+
+    // Function to initialize the name typing animation
+    function initNameTyping() {
+        new TypeIt('#name', {
+            strings: 'Mr.NoOne',
+            speed: 100,
+            loop: false,
+            cursor: false,
+        }).go();
+    }
 });
