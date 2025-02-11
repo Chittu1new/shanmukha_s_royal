@@ -11,28 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/js/all.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/loadTopBar.js" defer></script>
 </head>
 <body class="dark-mode">
-    <header>
-        <div class="container">
-            <div class="header-left">
-                <span class="terminal-icon"><i class="fas fa-terminal"></i></span>
-                <span id="name"></span>
-            </div>
-            <nav class="header-right">
-                <a href="#posts">Posts</a>
-                <a href="categories.html">Categories</a>
-                <a href="#about">About Me</a>
-                <div class="search-container">
-                    <input type="text" placeholder="Search..." id="search">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-                <button id="theme-switcher" title="Switch Theme">
-                    <i class="fas fa-adjust"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
+    <header id="topbar"></header>
     <main>
         <div class="container">
             <div class="avatar-container">
