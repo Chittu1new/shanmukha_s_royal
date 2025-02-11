@@ -10,17 +10,43 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/js/all.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js" defer></script>
-    <script src="js/loadTopBar.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script src="js/categories.js" defer></script>
+    <script src="js/loadTopBar.js" defer></script>
 </head>
 <body class="dark-mode">
+    <header id="topbar"></header>
     <main class="categories-page">
         <div class="sidebar">
             <button id="sidebar-toggle" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><a href="#" data-category="xss">XSS</a></li>
+                <li><a href="#" data-category="mysql">MySQL Injection</a></li>
+                <li><a href="#" data-category="reverse-shell">Reverse Shell</a></li>
+                <li><a href="#" data-category="csrf">CSRF</a></li>
+                <li><a href="#" data-category="Linux">Linux</a></li>
+                <li><a href="#" data-category="ssrf">SSRF</a></li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </div>
+        <div class="main-content">
+            <div id="xss" class="category-content">
+                <h2>XSS (Cross-Site Scripting)</h2>
+                <p>Notes on XSS...</p>
+            </div>
+            <div id="mysql" class="category-content">
+                <h2>MySQL Injection</h2>
+                <p>Notes on MySQL Injection...</p>
+            </div>
+            <div id="reverse-shell" class="category-content">
+                <h2>Reverse Shell</h2>
+                <p>Notes on Reverse Shell...</p>
+            </div>
+            <div id="csrf" class="category-content">
                 <h2>CSRF (Cross-Site Request Forgery)</h2>
                 <p>Notes on CSRF...</p>
             </div>
-			<div id="Linux" class="category-content">
+            <div id="Linux" class="category-content">
                 <h2>Linux (Linux commads)</h2>
                 <p>Notes on linux...</p>
             </div>
