@@ -6,16 +6,22 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
+    background-color: #142f25; /* Updated */
+    color: #ffffff; /* Updated */
 }
 
 .container {
     width: 90%;
     margin: auto;
     overflow: hidden;
+    background-color: #254e40; /* Updated */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    background: linear-gradient(90deg, #000000, #00ff7f); /* Dark gradient */
+    background: linear-gradient(90deg, #000100, #42826c); /* Updated */
     color: #fff;
     padding: 10px 0;
     position: sticky;
@@ -32,11 +38,13 @@ header {
 .terminal-icon {
     margin-right: 10px;
     font-size: 24px;
+    color: #42826c; /* Updated */
 }
 
 #name {
     font-size: 24px;
     font-weight: bold;
+    color: #38705d; /* Updated */
 }
 
 .header-right {
@@ -46,7 +54,7 @@ header {
 }
 
 .header-right a {
-    color: #fff;
+    color: #2f5f4e; /* Updated */
     text-decoration: none;
     padding: 0 10px;
     font-size: 18px;
@@ -54,7 +62,7 @@ header {
 }
 
 .header-right a:hover {
-    color: #FF0000;
+    color: #42826c; /* Updated */
 }
 
 .search-container {
@@ -66,6 +74,8 @@ header {
     padding: 5px;
     border: none;
     border-radius: 3px;
+    background-color: #1c3e32; /* Updated */
+    color: #ffffff; /* Updated */
 }
 
 .search-icon {
@@ -73,20 +83,24 @@ header {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #aaa;
+    color: #2f5f4e; /* Updated */
+}
+
+.search-icon:hover {
+    color: #42826c; /* Updated */
 }
 
 #theme-switcher {
     background: none;
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff; /* Updated */
     font-size: 18px;
     transition: color 0.3s;
 }
 
 #theme-switcher:hover {
-    color: #FF0000;
+    color: #42826c; /* Updated */
 }
 
 main {
@@ -112,8 +126,8 @@ main {
 }
 
 footer {
-    background: #000000;
-    color: #fff;
+    background: #0b2019; /* Updated */
+    color: #42826c; /* Updated */
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
@@ -150,7 +164,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: linear-gradient(90deg, #000000, #00ff7f);
+    background: linear-gradient(90deg, #000100, #42826c); /* Updated */
 }
 
 body.dark-mode .header-right a {
@@ -166,7 +180,7 @@ body.dark-mode #theme-switcher {
 }
 
 body.dark-mode footer {
-    background: #000000;
+    background: #0b2019; /* Updated */
 }
 
 /* Categories Page */
