@@ -7,14 +7,34 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/js/all.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js" defer></script>
-    <script src="js/loadTopBar.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/categories.js" defer></script>
 </head>
 <body class="dark-mode">
-    <header id="topbar"></header>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <span class="terminal-icon"><i class="fas fa-terminal"></i></span>
+                <span id="name"></span>
+            </div>
+            <nav class="header-right">
+                <a href="index.html">Home</a>
+                <a href="#posts">Posts</a>
+                <a href="categories.html">Categories</a>
+                <a href="#about">About Me</a>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." id="search">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button id="theme-switcher" title="Switch Theme">
+                    <i class="fas fa-adjust"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
     <main class="categories-page">
         <div class="sidebar">
             <button id="sidebar-toggle" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
@@ -45,7 +65,7 @@
                 <h2>CSRF (Cross-Site Request Forgery)</h2>
                 <p>Notes on CSRF...</p>
             </div>
-            <div id="Linux" class="category-content">
+			<div id="Linux" class="category-content">
                 <h2>Linux (Linux commads)</h2>
                 <p>Notes on linux...</p>
             </div>
