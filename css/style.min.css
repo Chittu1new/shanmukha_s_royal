@@ -8,6 +8,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     background-color: #1c1c1c; /* Darker background color */
     color: #d4d4d4; /* Lighter text color for better contrast */
+    font-size: 20px; /* Increased font size */
 }
 
 .container {
@@ -25,7 +26,6 @@ header {
     z-index: 1000;
 }
 
-/* Add specific styles for the topbar in the categories page */
 .categories-topbar {
     padding: 5px 0; /* Reduced padding to decrease height */
 }
@@ -38,11 +38,11 @@ header {
 
 .terminal-icon {
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 28px; /* Increased font size */
 }
 
 #name {
-    font-size: 24px;
+    font-size: 28px; /* Increased font size */
     font-weight: bold;
 }
 
@@ -56,7 +56,7 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 0 10px;
-    font-size: 18px;
+    font-size: 22px; /* Increased font size */
     transition: color 0.3s;
 }
 
@@ -75,6 +75,7 @@ header {
     border-radius: 3px;
     background-color: #333; /* Darker input background */
     color: #fff; /* Lighter input text */
+    font-size: 18px; /* Increased font size */
 }
 
 .search-icon {
@@ -90,7 +91,7 @@ header {
     border: none;
     cursor: pointer;
     color: #fff;
-    font-size: 18px;
+    font-size: 22px; /* Increased font size */
     transition: color 0.3s;
 }
 
@@ -101,6 +102,7 @@ header {
 main {
     padding: 20px 0;
     text-align: center;
+    font-size: 22px; /* Increased font size */
 }
 
 .avatar-container {
@@ -126,6 +128,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    font-size: 20px; /* Increased font size */
 }
 
 body.light-mode {
