@@ -25,6 +25,11 @@ header {
     z-index: 1000;
 }
 
+/* Add specific styles for the topbar in the categories page */
+.categories-topbar {
+    padding: 5px 0; /* Reduced padding to decrease height */
+}
+
 .header-left {
     float: left;
     display: flex;
@@ -172,7 +177,3 @@ body.dark-mode #theme-switcher {
 body.dark-mode footer {
     background: #0d0d0d;
 }
-
-
-
-
