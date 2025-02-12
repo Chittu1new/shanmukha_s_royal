@@ -176,7 +176,7 @@ body.dark-mode footer {
 /* Categories Page */
 .categories-page {
     display: flex;
-    padding-top: 70px; /* Ensure content doesn't overlap with the header */
+    padding-top: 50px; /* Ensure content doesn't overlap with the header */
 }
 
 
