@@ -27,4 +27,25 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         body.classList.add('dark-mode');
     }
+
+    // Make sidebar dynamic
+    const sidebar = document.getElementById('sidebar');
+    const sidebarLinks = sidebar.querySelectorAll('a');
+    const sections = document.querySelectorAll('main > h1');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.id;
+            const link = sidebar.querySelector(`a[href="#${id}"]`);
+            if (entry.isIntersecting) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }, { rootMargin: '-50% 0px -50% 0px', threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
