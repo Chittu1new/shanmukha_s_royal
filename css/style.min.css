@@ -23,6 +23,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-bottom: 0; /* Ensure no margin below the header */
 }
 
 .header-left {
@@ -176,7 +177,7 @@ body.dark-mode footer {
 /* Categories Page */
 .categories-page {
     display: flex;
-    padding-top: 70px; /* Ensure content doesn't overlap with the header */
+    padding-top: 0; /* Ensure no extra padding at the top */
 }
 
 .sidebar {
@@ -187,7 +188,7 @@ body.dark-mode footer {
     height: calc(100vh - 70px); /* Adjust for the header height */
     position: fixed;
     overflow-y: auto;
-    top: 70px; /* Ensure sidebar starts below the header */
+    top: 0; /* Ensure sidebar starts at the top */
     transition: width 0.3s;
 }
 
