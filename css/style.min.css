@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
-    background-color: #1c1c1c; /* Darker background color */
+    background-color: #000000; /* Darker background color */
     color: #d4d4d4; /* Lighter text color for better contrast */
     font-size: 20px; /* Increased font size */
 }
