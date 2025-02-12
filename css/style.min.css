@@ -24,10 +24,12 @@ header {
     top: 0;
     z-index: 1000;
     margin-bottom: 0; /* Ensure no margin below the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-left {
-    float: left;
     display: flex;
     align-items: center;
 }
@@ -43,7 +45,6 @@ header {
 }
 
 .header-right {
-    float: right;
     display: flex;
     align-items: center;
 }
