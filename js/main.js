@@ -28,24 +28,57 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.add('dark-mode');
     }
 
-    // Make sidebar dynamic
-    const sidebar = document.getElementById('sidebar');
-    const sidebarLinks = sidebar.querySelectorAll('a');
-    const sections = document.querySelectorAll('main > h1');
+    // Dynamic Sidebar
+    const sidebarList = document.getElementById('sidebar-list');
+    const payloads = [
+        { name: "XSS", file: "Payload/XSS.txt" },
+        { name: "Open Redirect", file: "Payload/Open Redirect.txt" },
+        { name: "File Transfer", file: "Payload/File Transfer.txt" },
+        { name: "LFI", file: "Payload/LFI.txt" },
+        { name: "TTY Spawn Shell", file: "Payload/TTY Spawn Shell.txt" },
+        { name: "Linux Commands", file: "Payload/Linux Commands.txt" }
+    ];
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const id = entry.target.id;
-            const link = sidebar.querySelector(`a[href="#${id}"]`);
-            if (entry.isIntersecting) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }, { rootMargin: '-50% 0px -50% 0px', threshold: 0.1 });
-
-    sections.forEach(section => {
-        observer.observe(section);
+    payloads.forEach(payload => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${payload.name.toLowerCase().replace(/ /g, '-')}`;
+        a.textContent = payload.name;
+        a.dataset.file = payload.file;
+        li.appendChild(a);
+        sidebarList.appendChild(li);
     });
+
+    const contentDiv = document.getElementById('payload-content');
+
+    sidebarList.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            event.preventDefault();
+            const filePath = event.target.dataset.file;
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    contentDiv.innerHTML = `
+                        <h2>${event.target.textContent}</h2>
+                        <div class="copy-box">
+                            <pre>${data}</pre>
+                            <button onclick="copyToClipboard()">Copy</button>
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error loading file:', error);
+                    contentDiv.innerHTML = `<p>Error loading content.</p>`;
+                });
+        }
+    });
+
+    window.copyToClipboard = function() {
+        const copyText = document.querySelector('.copy-box pre').textContent;
+        navigator.clipboard.writeText(copyText).then(() => {
+            alert('Copied to clipboard!');
+        }, () => {
+            alert('Failed to copy text.');
+        });
+    };
 });
