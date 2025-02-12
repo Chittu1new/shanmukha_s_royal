@@ -232,35 +232,3 @@ body.dark-mode footer {
 .category-content {
     display: none;
 }
-
-
-.category-nav {
-    background-color: #254e40; /* Updated */
-    padding: 10px 0;
-    text-align: center;
-    border-top: 1px solid #1c3e32; /* Updated */
-    border-bottom: 1px solid #1c3e32; /* Updated */
-}
-
-.category-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.category-nav ul li {
-    margin: 0 15px;
-}
-
-.category-nav ul li a {
-    color: #ffffff; /* Updated */
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.category-nav ul li a:hover {
-    color: #42826c; /* Updated */
-}
