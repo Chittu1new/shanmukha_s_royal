@@ -173,21 +173,6 @@ body.dark-mode footer {
     background: #0d0d0d;
 }
 
-/* Categories Page */
-.categories-page {
-    display: flex;
-    padding-top: 50px; /* Ensure content doesn't overlap with the header */
-}
 
 
 
-.main-content {
-    margin-left: 150px; /* Adjusted to match the reduced sidebar width */
-    padding: 20px;
-    flex: 1;
-    transition: margin-left 0.3s;
-}
-
-.category-content {
-    display: none;
-}
