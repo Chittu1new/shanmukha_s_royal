@@ -23,10 +23,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-bottom: 0; /* Ensure no margin below the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-left {
-    float: left;
     display: flex;
     align-items: center;
 }
@@ -42,7 +45,6 @@ header {
 }
 
 .header-right {
-    float: right;
     display: flex;
     align-items: center;
 }
@@ -176,63 +178,11 @@ body.dark-mode footer {
 /* Categories Page */
 .categories-page {
     display: flex;
-    padding-top: 70px; /* Ensure content doesn't overlap with the header */
-}
-
-.sidebar {
-    width: 150px; /* Reduced width for the sidebar */
-    background-color: #2c2c2c; /* Darker sidebar background */
-    color: #fff;
-    padding: 20px;
-    height: calc(100vh - 70px); /* Adjust for the header height */
-    position: fixed;
-    overflow-y: auto;
-    top: 70px; /* Ensure sidebar starts below the header */
-    transition: width 0.3s;
-}
-
-#sidebar-toggle {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-    margin-left: 10px;
-}
-
-.sidebar ul li a:hover {
-    color: #00ff7f;
-}
-
-.sidebar ul li .linux-icon {
-    font-size: 24px;
+    flex-direction: column;
+    padding-top: 0; /* Ensure no extra padding at the top */
 }
 
 .main-content {
-    margin-left: 150px; /* Adjusted to match the reduced sidebar width */
     padding: 20px;
     flex: 1;
-    transition: margin-left 0.3s;
-}
-
-.category-content {
-    display: none;
 }
