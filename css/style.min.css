@@ -183,7 +183,7 @@ body.dark-mode footer {
 
 /* Sidebar styles */
 .sidebar {
-    height: 100%;
+    height: calc(100vh - 50px);
     width: 250px;
     position: fixed;
     top: 50px; /* Adjusted to avoid overlapping with the topbar */
