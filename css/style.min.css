@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
-    background-color: #000000; /* Darker background color */
+    background-color: #1c1c1c; /* Darker background color */
     color: #d4d4d4; /* Lighter text color for better contrast */
     font-size: 20px; /* Increased font size */
 }
@@ -122,6 +122,16 @@ main {
     transform: scale(1.1);
 }
 
+.video-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
 footer {
     background: #0d0d0d;
     color: #fff;
@@ -181,4 +191,58 @@ body.dark-mode footer {
     background: #0d0d0d;
 }
 
+.card-wrapper {
+    margin-bottom: 20px;
+}
 
+.card {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.post-preview .img-link {
+    display: block;
+    width: 100%;
+}
+
+.post-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.post-preview .card-body {
+    padding: 15px;
+}
+
+.post-preview .card-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.post-preview .card-text {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-meta i {
+    margin-right: 5px;
+}
+
+.post-meta .categories {
+    font-size: 16px;
+}
