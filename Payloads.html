@@ -11,35 +11,39 @@
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js" defer></script>
     <script src="js/loadTopBar.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/loadContent.js" defer></script>
     <title>Payloads - Mr.NoOne's Blog</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+        }
+        .content {
+            width: 80%;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body class="dark-mode">
     <header id="topbar" class="categories-topbar"></header>
-    <div class="sidebar" id="sidebar">
-        <h2>Payloads</h2>
-        <ul>
-            <li><a href="#xss">XSS</a></li>
-            <li><a href="#open-redirect">Open Redirect</a></li>
-            <li><a href="#file-transfer">File Transfer</a></li>
-            <li><a href="#lfi">LFI</a></li>
-            <li><a href="#tty-spawn-shell">TTY Spawn Shell</a></li>
-            <li><a href="#linux-commands">Linux Commands</a></li>
-        </ul>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Payloads</h2>
+            <ul>
+                <li><a href="#" data-file="Payload/xss.html">XSS</a></li>
+                <li><a href="#" data-file="Payload/open-redirect.html">Open Redirect</a></li>
+                <li><a href="#" data-file="Payload/file-transfer.html">File Transfer</a></li>
+                <li><a href="#" data-file="Payload/lfi.html">LFI</a></li>
+                <li><a href="#" data-file="Payload/tty-spawn-shell.html">TTY Spawn Shell</a></li>
+                <li><a href="#" data-file="Payload/linux-commands.html">Linux Commands</a></li>
+            </ul>
+        </div>
+        <main class="content" id="content">
+            <!-- Default content can go here or leave it empty -->
+        </main>
     </div>
-    <main class="content">
-        <!-- Your existing content goes here -->
-        <h1 id="xss">XSS</h1>
-        <p>Content for XSS...</p>
-        <h1 id="open-redirect">Open Redirect</h1>
-        <p>Content for Open Redirect...</p>
-        <h1 id="file-transfer">File Transfer</h1>
-        <p>Content for File Transfer...</p>
-        <h1 id="lfi">LFI</h1>
-        <p>Content for LFI...</p>
-        <h1 id="tty-spawn-shell">TTY Spawn Shell</h1>
-        <p>Content for TTY Spawn Shell...</p>
-        <h1 id="linux-commands">Linux Commands</h1>
-        <p>Content for Linux Commands...</p>
-    </main>
 </body>
 </html>
