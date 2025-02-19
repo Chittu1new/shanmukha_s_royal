@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.navigation button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navigation button:hover {
+    background-color: #444;
+}
+
+.typing-container {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    padding-right: 5px;
+    display: inline-block;
+    animation: blinkCursor 0.8s infinite;
+    font-size: 22px;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.content {
+    padding: 20px;
+}
