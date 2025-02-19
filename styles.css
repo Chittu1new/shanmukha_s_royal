@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: white;
+    color: red;
     font-family: 'Courier New', monospace;
     margin: 0;
 }
@@ -10,30 +10,32 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
+    background-color: black;
 }
 
 .navigation button {
     background: none;
     border: none;
-    color: white;
+    color: red;
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
 }
 
 .navigation button:hover {
-    background-color: #444;
+    background-color: red;
+    color: black;
 }
 
 .typing-container {
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid white;
+    border-right: 2px solid red;
     padding-right: 5px;
     display: inline-block;
     animation: blinkCursor 0.8s infinite;
     font-size: 22px;
+    color: red;
 }
 
 @keyframes blinkCursor {
@@ -44,4 +46,5 @@ body {
 
 .content {
     padding: 20px;
+    color: red;
 }
