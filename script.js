@@ -1,4 +1,4 @@
-const originalText = "Your Dynamic Name Here";
+const originalText = "Mr.N00n3_53c!";
 const speed = 50; // Speed of random character changes
 const letterRevealDelay = 120; // Delay before locking the correct letters
 const backspaceSpeed = 50; // Speed of backspacing effect
