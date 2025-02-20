@@ -1,11 +1,11 @@
-const originalText = "Mr.N00n3_53c!";
+const originalText = "Mr.N0On3_S3c!";
 const speed = 50; // Speed of random character changes
 const letterRevealDelay = 120; // Delay before locking the correct letters
 const backspaceSpeed = 50; // Speed of backspacing effect
 const pauseBeforeBackspace = 3000; // Pause before starting backspace effect
 const pauseBeforeRestart = 2000; // Pause before restarting animation
 const randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
-const textElement = document.getElementById("typing-name");
+const textElement = document.getElementById("typing-text");
 
 function getRandomChar() {
     return randomChars[Math.floor(Math.random() * randomChars.length)];
